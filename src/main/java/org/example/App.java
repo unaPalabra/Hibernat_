@@ -31,7 +31,6 @@ public class App {
         session.getTransaction().commit(); //получаем транзакцию, коммитем (записываем) изменения
         session.close();
 
-
         session = sessionFactory.openSession();
         session.beginTransaction();
         List result = session.createQuery("from Event").list();
